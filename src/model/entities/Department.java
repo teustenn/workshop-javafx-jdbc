@@ -9,7 +9,7 @@ public class Department implements Serializable {
 	
 	private Integer id;
 	private String name;
-	
+
 	public Department() {
 	}
 
@@ -48,7 +48,12 @@ public class Department implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Department other = (Department) obj;
-		return Objects.equals(id, other.id);
+		return id == other.id;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("DepartmentID: %d, DepartmentName: %s", id, name);
 	}
 	
 }

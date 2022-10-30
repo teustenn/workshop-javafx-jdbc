@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane prefHeight="145.0" prefWidth="453.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+<AnchorPane prefHeight="145.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DepartmentFormController">
    <children>
       <GridPane layoutX="25.0" layoutY="29.0" prefHeight="103.0" prefWidth="411.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
         <columnConstraints>
@@ -27,17 +26,17 @@
          <children>
             <Label text="ID" />
             <Label text="Name" GridPane.rowIndex="1" />
-            <TextField editable="false" GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label prefHeight="17.0" prefWidth="0.0" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="txtID" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="labErrorName" prefHeight="17.0" prefWidth="0.0" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Button mnemonicParsing="false" text="Save">
+                  <Button fx:id="butSave" mnemonicParsing="false" onAction="#onButSaveAction" text="Save">
                      <HBox.margin>
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Cancel">
+                  <Button fx:id="butCancel" mnemonicParsing="false" onAction="#onButCancelAction" text="Cancel">
                      <HBox.margin>
                         <Insets top="5.0" />
                      </HBox.margin>

@@ -35,5 +35,9 @@ public class Main extends Application {
 	public static Scene getMainScene() {
 		return mainScene;
 	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
 
 }

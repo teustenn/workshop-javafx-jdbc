@@ -100,7 +100,6 @@ public class DepartmentListController implements Initializable, DataChangeListen
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.showAndWait();
 			
-			
 		}
 		catch (IOException e) {
 			Alerts.showAlert("IOException", "ERROR Loandig View!", e.getMessage(), AlertType.ERROR);
